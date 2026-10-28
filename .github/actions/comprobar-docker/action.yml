@@ -1,0 +1,5 @@
+name: Comprobar documentación (Docker)
+description: Comprueba README.md, LICENSE y CONTRIBUTING.md dentro de un contenedor
+runs:
+  using: docker
+  image: Dockerfile

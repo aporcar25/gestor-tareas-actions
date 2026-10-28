@@ -1,0 +1,14 @@
+name: Probar accion JavaScript
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v7
+
+      - name: Ejecutar nuestra accion JavaScript
+        uses: ./.github/actions/comprobar-js

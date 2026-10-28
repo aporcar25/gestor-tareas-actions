@@ -1,0 +1,5 @@
+name: Comprobar documentación (JavaScript)
+description: Comprueba README.md, LICENSE y CONTRIBUTING.md usando Node.js
+runs:
+  using: node24
+  main: index.js
