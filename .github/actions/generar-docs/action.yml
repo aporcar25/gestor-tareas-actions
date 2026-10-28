@@ -1,0 +1,27 @@
+name: Generar documentación
+description: Genera la web con MkDocs y la documentación técnica con Sphinx en varios formatos
+runs:
+  using: composite
+  steps:
+    - name: Instalar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Instalar dependencias
+      shell: bash
+      run: pip install -r requirements.txt
+
+    - name: Generar la web con MkDocs
+      shell: bash
+      run: mkdocs build --strict
+
+    - name: Generar la API con Sphinx (HTML dentro de la web)
+      shell: bash
+      run: sphinx-build -b html docs_sphinx site/api
+
+    - name: Generar otros formatos con Sphinx (texto y ePub)
+      shell: bash
+      run: |
+        sphinx-build -b text docs_sphinx build/formatos/text
+        sphinx-build -b epub docs_sphinx build/formatos/epub

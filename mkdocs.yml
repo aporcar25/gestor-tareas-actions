@@ -3,5 +3,6 @@ nav:
   - Inicio: index.md
   - Instalación: instalacion.md
   - Uso: uso.md
+  - API (Sphinx): https://aporcar25.github.io/gestor-tareas-actions/api/
 theme:
   name: readthedocs
