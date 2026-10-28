@@ -83,3 +83,18 @@ def eliminar_tarea(tareas, id_tarea):
             tareas.remove(tarea)
             return True
     return False
+
+def buscar_tarea(tareas, id_tarea):
+    """Busca una tarea por su identificador.
+
+    Args:
+        tareas (list): Lista actual de tareas.
+        id_tarea (int): Identificador de la tarea.
+
+    Returns:
+        dict | None: La tarea encontrada o None si no existe.
+    """
+    for tarea in tareas:
+        if tarea["id"] == id_tarea:
+            return tarea
+    return None
