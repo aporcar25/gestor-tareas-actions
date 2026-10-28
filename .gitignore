@@ -6,3 +6,5 @@ tareas.json
 site/
 .vscode/
 .idea/
+build/
+_build/
