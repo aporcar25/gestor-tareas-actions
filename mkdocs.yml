@@ -1,0 +1,7 @@
+site_name: Gestor de tareas
+nav:
+  - Inicio: index.md
+  - Instalación: instalacion.md
+  - Uso: uso.md
+theme:
+  name: readthedocs
